@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #222;
+    /* background-image: url('https://source.unsplash.com/1600x900/?landscape'); */
+    transition: 0.3s ease-in-out;
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.card {
+    background: white;
+    color: black;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 400px;
+    opacity: 0.8;
+    /* margin: 50px */  
+}
+
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.btn{
+    margin: 2em;
+    border-radius: 50%;
+    border: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: #7c7c7c2b;
+    color: white;
+   
+ 
+}
+
+.btn:hover{
+    background:white; 
+    color: black;
+    transition: 0.3s ease-in-out;
+    border: 1px solid black;
+}
+input {
+    border:none;
+    padding: 0.5em 1em;
+    border-radius: 24px;
+    /* height: 44px; */
+    outline: none;
+    background: #7c7c7c2b;
+    color: black;
+    font-size: 105%;  
+    width: calc(100% - 100px);  
+    
+
+}
+
+.wheather_info{
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.city{
+    font-size: 30px;
+     transition: 0.5s ease-in-out;
+}
+
+.preloader {
+    /*фиксированное позиционирование*/
+    position: fixed;
+    /* координаты положения */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    /* фоновый цвет элемента */
+    background: #e0e0e0;
+    /* размещаем блок над всеми элементами на странице (это значение должно быть больше, чем у любого другого позиционированного элемента на странице) */
+    z-index: 1001;
+  }
+  
+  .preloader__row {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite linear;
+  }
+  
+  .preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: #337ab7;
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+  }
+  
+  .preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+  }
+  
+  @keyframes preloader-rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes preloader-bounce {
+  
+    0%,
+    100% {
+      transform: scale(0);
+    }
+  
+    50% {
+      transform: scale(1);
+    }
+  }
+  
+  .loaded_hiding .preloader {
+    transition: 0.3s opacity;
+    opacity: 0;
+  }
+  
+  .loaded .preloader {
+    display: none;
+  }
+
+  .Describing{
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+  }
